@@ -1,11 +1,15 @@
-import { Link } from "react-router-dom";
 
+import DashboardStartGrid from "./DashboardStartGrid";
+import TransactionChart from "./TransactionChart";
+import BuyerProfilePieChart from './BuyerProfilePieChart';
 export default function Dashboard(){
    return( 
-    <div>
-    This is Dashboard
-    <Link to= './products'><p className="underline">Go to Products</p></Link>
+    <div className="flex gap-4 flex-col">
+    <DashboardStartGrid/>
+    <div className="flex flex-row gap-4 w-full"> 
+    <TransactionChart/>
+    <BuyerProfilePieChart/>
     </div>
-    
+    </div>
    )
 }
